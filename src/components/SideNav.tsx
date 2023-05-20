@@ -14,7 +14,11 @@ import {
 } from "@mui/icons-material";
 import { MockText, Drawer, DrawerHeader } from "./util";
 
-export default function SideNav({ open }) {
+type SideNavProps = {
+  open: boolean;
+};
+
+export const SideNav = ({ open }: SideNavProps) => {
   return (
     <Box sx={{ display: "flex" }}>
       <Drawer variant="permanent" open={open}>

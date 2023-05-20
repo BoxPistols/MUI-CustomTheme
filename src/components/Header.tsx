@@ -6,7 +6,7 @@ import {
   ChevronRight as ChevronRightIcon
 } from "@mui/icons-material";
 import { AppBar } from "./util";
-import SideNav from "./SideNav";
+import { SideNav } from "./SideNav";
 
 export default function Header() {
   const [open, setOpen] = React.useState(false);
