@@ -89,11 +89,14 @@ export const DrawerHeader = styled("div")(({ theme }) => ({
 export const MockText = () => {
   return (
     <>
-      <Typography variant="display1">Theme Display 1</Typography>
-      <Typography variant="display2">Theme Display 2</Typography>
+      <Typography variant="h1">Variant h1</Typography>
+      <Typography variant="h2">Variant h2</Typography>
 
-      <Display1>Custom Display1</Display1>
-      <Display2>Custom Display2</Display2>
+      <Typography variant="display1">Add Theme Display 1</Typography>
+      <Typography variant="display2">Add Theme Display 2</Typography>
+
+      <Display1>CustomTypography Display1</Display1>
+      <Display2>CustomTypography Display2</Display2>
 
       <Typography paragraph>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
