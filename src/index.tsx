@@ -1,29 +1,30 @@
-import * as React from "react";
-import { createRoot } from 'react-dom/client'
-import { StyledEngineProvider } from "@mui/material/styles";
-import { ThemeProvider } from "@mui/material/styles";
+import * as ReactDOM from 'react-dom'
+import CssBaseline from '@mui/material/CssBaseline'
+import { ThemeProvider } from '@mui/material/styles'
+import { CacheProvider } from '@emotion/react'
+import { StyledEngineProvider } from '@mui/material/styles'
+import createCache from '@emotion/cache'
+import { theme } from './lib/theme'
+import Header from './components/Header'
+import './style.css'
 
-import { theme } from "./components/theme";
-import Header from "./components/Header";
-import { Button, CssBaseline } from "@mui/material";
-import "./style.css";
+const cache = createCache({
+  key: 'my-prefix',
+  prepend: true,
+  stylisPlugins: [],
+})
 
-
-const container = document.getElementById('root')
-
-if (container) {
-  const root = createRoot(container)
-  root.render(
-    
-  <>
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <StyledEngineProvider injectFirst>
-        <Button variant="contained">Hello World</Button>
-        
-        <Header />
-      </StyledEngineProvider>
-    </ThemeProvider>
-  </> 
+function Main() {
+  return (
+    <CacheProvider value={cache}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <StyledEngineProvider injectFirst>
+          <Header />
+        </StyledEngineProvider>
+      </ThemeProvider>
+    </CacheProvider>
   )
 }
+
+ReactDOM.hydrate(<Main />, document.querySelector('#root'))

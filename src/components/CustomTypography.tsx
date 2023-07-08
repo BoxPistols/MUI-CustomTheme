@@ -7,7 +7,7 @@ export const Display1: OverridableComponent<TypographyTypeMap<{}, 'h1'>> =
   styled((props: TypographyProps) => {
     return <Typography {...props} />
   })(() => ({
-    fontSize: '2.4rem',
+    fontSize: '1.4rem',
     fontWeight: 700,
     lineHeight: 1.5,
     color: 'teal',
@@ -17,7 +17,7 @@ export const Display2: OverridableComponent<TypographyTypeMap<{}, 'h2'>> =
   styled((props: TypographyProps) => {
     return <Typography {...props} />
   })(() => ({
-    fontSize: '2rem',
+    fontSize: '1.2rem',
     fontWeight: 700,
     lineHeight: 1.5,
     color: 'teal',

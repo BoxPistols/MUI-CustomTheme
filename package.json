@@ -1,5 +1,18 @@
 {
+  "keywords": [],
+  "name": "mui-customtheme",
+  "version": "0.0.4",
+  "private": false,
+  "license": "MIT",
+  "main": "index.tsx",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
+    "@emotion/babel-plugin": "^11.11.0",
     "@emotion/react": "latest",
     "@emotion/styled": "latest",
     "@mui/icons-material": "latest",
@@ -14,21 +27,12 @@
   "devDependencies": {
     "react-scripts": "latest"
   },
-  "main": "index.tsx",
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  },
-  "keywords": [],
-  "name": "mui-customtheme",
-  "version": "0.0.400",
   "browserslist": {
     "production": [
-      ">0.2%",
+      ">4%",
       "not dead",
-      "not op_mini all"
+      "not op_mini all",
+      "not ie all"
     ],
     "development": [
       "last 1 chrome version",
