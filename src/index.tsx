@@ -27,4 +27,12 @@ function Main() {
   )
 }
 
-ReactDOM.render(<Main />, document.getElementById('root'))
+// ReactDOM.render(<Main />, container)
+const container = document.getElementById('root')
+import { createRoot } from 'react-dom/client'
+if (container) {
+  const root = createRoot(container)
+  root.render(<Main />)
+}
+// ReactDOM.render(<Main />, container)
+// const root = createRoot(container)
