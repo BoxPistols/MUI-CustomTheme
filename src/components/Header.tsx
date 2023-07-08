@@ -7,17 +7,15 @@ import {
 } from '@mui/icons-material'
 import { AppBar } from './util'
 import { SideNav } from './SideNav'
-import { theme } from './theme'
 
 export default function Header() {
   const [open, setOpen] = React.useState(false)
-
   const handleDrawerOpen = () => {
     setOpen(!open)
   }
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <>
       <AppBar position="fixed">
         <Toolbar>
           <IconButton
@@ -33,17 +31,12 @@ export default function Header() {
           >
             {open ? <ChevronLeftIcon /> : <ChevronRightIcon />}
           </IconButton>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            color={theme.palette.primary.contrastText}
-          >
+          <Typography variant="xl" color={'primary.contrastText'} noWrap>
             Mini variant drawer
           </Typography>
         </Toolbar>
       </AppBar>
       <SideNav open={open} />
-    </Box>
+    </>
   )
 }
