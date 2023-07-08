@@ -31,7 +31,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
 }))
 
 // デフォルトのTableCell
-export const CustomTableCell = ({
+const CustomTableCell = ({
   children,
   minWidthValue,
   maxWidthValue,
@@ -66,7 +66,7 @@ const StyledTableCellAction = styled(TableCell)(({ theme }) => ({
     position: `sticky`,
     top: 0,
     right: 0,
-    // borderColor: theme.colors.alpha.black[5],
+    borderColor: theme.palette.grey[500],
   },
 }))
 
@@ -81,3 +81,5 @@ export const CustomTableCellAction = ({
     </StyledTableCellAction>
   )
 }
+
+export default CustomTableCell

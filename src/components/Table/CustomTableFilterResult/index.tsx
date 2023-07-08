@@ -1,6 +1,5 @@
 import { Box, TableBody } from '@mui/material'
-import { CustomTableCell } from '../CustomTableCell'
-import { CustomTableRow } from '../CustomTableRow'
+import { CustomTableCell, CustomTableRow } from '@/components/Table'
 
 type Props = {
   text?: string

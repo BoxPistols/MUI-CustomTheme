@@ -9,15 +9,17 @@ type Props = {
 
 const StyledTableRow = styled(TableRow)(({ theme }) => ({
   '&:nth-of-type(odd)': {
-    // background: theme.colors.alpha.black[10],
+    backgroundColor: theme.palette.grey[100],
     '&:hover': {
-      // background: theme.colors.primary.lighter,
+      background: theme.palette.primary.lighter,
+      cursor: 'pointer',
     },
   },
   '&:nth-of-type(even)': {
-    // background: theme.colors.alpha.black[5],
+    backgroundColor: theme.palette.grey[50],
     '&:hover': {
-      // background: theme.colors.primary.lighter,
+      background: theme.palette.primary.lighter,
+      cursor: 'pointer',
     },
   },
   '&:last-child td, &:last-child th': {
@@ -25,6 +27,8 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }))
 
-export const CustomTableRow = ({ children }: Props & ElementProps) => {
+const CustomTableRow = ({ children }: Props & ElementProps) => {
   return <StyledTableRow>{children}</StyledTableRow>
 }
+
+export default CustomTableRow

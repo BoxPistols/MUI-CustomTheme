@@ -14,7 +14,7 @@ type Props = {
   sx?: SxProps
 }
 
-export const CustomTable = ({
+const CustomTable = ({
   children,
   caption,
   sx,
@@ -27,3 +27,5 @@ export const CustomTable = ({
     </Table>
   )
 }
+
+export default CustomTable

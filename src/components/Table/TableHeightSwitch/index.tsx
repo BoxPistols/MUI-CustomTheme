@@ -9,7 +9,7 @@ type Props = {
   label: string
 }
 
-export const TableHeightSwitch = ({
+const TableHeightSwitch = ({
   checked,
   onChange,
   sxStyle,
@@ -32,3 +32,5 @@ export const TableHeightSwitch = ({
     />
   )
 }
+
+export default TableHeightSwitch

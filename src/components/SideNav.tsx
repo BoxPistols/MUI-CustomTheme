@@ -47,7 +47,10 @@ export const SideNav = ({ open }: SideNavProps) => {
         </List>
       </Drawer>
 
-      <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+      <Box
+        component="main"
+        sx={{ flexGrow: 1, p: 3, maxWidth: '100%', overflow: 'auto' }}
+      >
         <DrawerHeader />
         <Contents />
       </Box>

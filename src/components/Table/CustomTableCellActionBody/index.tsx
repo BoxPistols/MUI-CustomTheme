@@ -47,10 +47,10 @@ const IconButtonUI = styled(IconButton)(
   &.MuiButtonBase-root {
     &.MuiIconButton-root {
       margin: ${theme.spacing(0, 0.5)};
+      backgroundColor: ${theme.palette.grey[100]},
     }
     `,
 )
-// background: ${theme.colors.alpha.white[70]};
 
 export const CustomTableCellActionBody = ({
   hasEdit,

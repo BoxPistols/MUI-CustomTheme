@@ -9,7 +9,7 @@ type Props = {
   sx?: SxProps
 }
 
-export const CustomTableContainer = ({
+const CustomTableContainer = ({
   children,
   maxHeightValue,
   sx,
@@ -26,3 +26,4 @@ export const CustomTableContainer = ({
     </TableContainer>
   )
 }
+export default CustomTableContainer
