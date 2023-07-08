@@ -13,15 +13,16 @@
   },
   "dependencies": {
     "@emotion/babel-plugin": "^11.11.0",
-    "@emotion/react": "latest",
-    "@emotion/styled": "latest",
-    "@mui/icons-material": "latest",
-    "@mui/material": "latest",
-    "@types/react": "latest",
-    "@types/react-dom": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "typescript": "latest"
+    "@emotion/react": "^11.11.0",
+    "@emotion/server": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.13.7",
+    "@mui/material": "^5.13.7",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "react": "^18.0.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^4.4.4"
   },
   "description": "https://github.com/mui/material-ui/blob/v5.12.2/docs/data/material/components/drawers/MiniDrawer.tsx",
   "devDependencies": {
@@ -31,8 +32,7 @@
     "production": [
       ">4%",
       "not dead",
-      "not op_mini all",
-      "not ie all"
+      "not op_mini all"
     ],
     "development": [
       "last 1 chrome version",
