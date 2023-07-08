@@ -228,8 +228,8 @@ export const theme = createTheme(
 
       allVariants: {
         fontFamily:
-          'Inter, Noto Sans JP, Helvetica, Arial, Segoe UI, BIZ UDPゴシック, sans-serif',
-        // fontFamily: "Futura", "Helvetica Neue", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "BIZ UDPゴシック", "Noto Sans JP", Helvetica, Arial, sans-serif !important',
+          'Futura, Inter, Noto Sans JP, Helvetica, Arial, BIZ UDPゴシック, sans-serif',
+        // fontFamily: "Futura", "Helvetica Neue", "Inter", -apple-system, BlinkMacSystemFont...
         color: colorData.text.primary,
         lineHeight: lineHeight.medium,
         fontWeight: fontWeight.normal,
@@ -429,30 +429,6 @@ export const theme = createTheme(
         fontSize: fontSizesVariant.md, // 1rem = 14px
       },
     },
-
-    // // Headerのスタイル
-    // MuiAppBar: {
-    //   styleOverrides: {
-    //     root: {
-    //       boxShadow: 'none',
-    //     },
-    //   },
-    // },
-    // MuiToolbar: {
-    //   styleOverrides: {
-    //     root: {
-    //       '.MuiTypography-root': {
-    //         color: colorData.common.white,
-    //       },
-    //       '@media(min-width:0px)': {
-    //         minHeight: 44,
-    //       },
-    //       '@media (min-width: 480px)': {
-    //         minHeight: 44,
-    //       },
-    //     },
-    //   },
-    // },
     // ボタンのスタイル
     MuiButton: {
       defaultProps: {

@@ -9,22 +9,30 @@ import Header from './components/Header'
 import './style.css'
 
 const cache = createCache({
-  key: 'my-prefix',
+  key: 'em',
   prepend: true,
   stylisPlugins: [],
 })
 
 function Main() {
   return (
-    <CacheProvider value={cache}>
+    <StyledEngineProvider injectFirst>
       <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <StyledEngineProvider injectFirst>
+        <CacheProvider value={cache}>
+          <CssBaseline />
           <Header />
-        </StyledEngineProvider>
+        </CacheProvider>
       </ThemeProvider>
-    </CacheProvider>
+    </StyledEngineProvider>
   )
 }
 
-ReactDOM.hydrate(<Main />, document.querySelector('#root'))
+// ReactDOM.render(<Main />, container)
+const container = document.getElementById('root')
+import { createRoot } from 'react-dom/client'
+if (container) {
+  const root = createRoot(container)
+  root.render(<Main />)
+}
+// ReactDOM.render(<Main />, container)
+// const root = createRoot(container)

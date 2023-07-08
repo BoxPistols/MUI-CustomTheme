@@ -12,27 +12,24 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
-    "@emotion/babel-plugin": "^11.11.0",
-    "@emotion/react": "latest",
-    "@emotion/styled": "latest",
-    "@mui/icons-material": "latest",
-    "@mui/material": "latest",
-    "@types/react": "latest",
-    "@types/react-dom": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "typescript": "latest"
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.13.7",
+    "@mui/material": "^5.13.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.1.6"
   },
-  "description": "https://github.com/mui/material-ui/blob/v5.12.2/docs/data/material/components/drawers/MiniDrawer.tsx",
+  "description": "Theme customization for MUI",
   "devDependencies": {
+    "@types/react-dom": "^18.2.6",
     "react-scripts": "latest"
   },
   "browserslist": {
     "production": [
-      ">4%",
+      ">8%",
       "not dead",
-      "not op_mini all",
-      "not ie all"
+      "not op_mini all"
     ],
     "development": [
       "last 1 chrome version",
