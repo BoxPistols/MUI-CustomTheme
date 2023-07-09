@@ -1,6 +1,5 @@
 import { styled, Typography } from '@mui/material'
 
-import * as React from 'react'
 import {
   AppBar as MuiAppBar,
   Drawer as MuiDrawer,
@@ -91,9 +90,7 @@ export const MockText = () => {
     <>
       <Typography variant="h1">Variant h1</Typography>
       <Typography variant="h2">Variant h2</Typography>
-
       <Typography variant="display1">Add Theme Display 1</Typography>
-
       <Display1>CustomTypography Display1</Display1>
 
       <Typography paragraph>
