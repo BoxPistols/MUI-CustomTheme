@@ -1,3 +1,4 @@
+import { Paper } from '@mui/material'
 import { DataGrid, GridRowsProp, GridColDef } from '@mui/x-data-grid'
 
 const rows: GridRowsProp = [
@@ -44,17 +45,17 @@ const rows: GridRowsProp = [
 ]
 
 const columns: GridColDef[] = [
-  { field: 'col1', headerName: 'Column 1' },
-  { field: 'col2', headerName: 'Column 2' },
-  { field: 'col3', headerName: 'Column 3' },
-  { field: 'col4', headerName: 'Column 4' },
+  { field: 'col1', headerName: 'Column 1', width: 180 },
+  { field: 'col2', headerName: 'Column 2', width: 180 },
+  { field: 'col3', headerName: 'Column 3', width: 180 },
+  { field: 'col4', headerName: 'Column 4', width: 180 },
   { field: 'col5', headerName: 'Column 5' },
 ]
 
 export default function DataGridBasic() {
   return (
-    <div style={{ height: 300, width: '100%' }}>
+    <Paper sx={{ height: 500 }} elevation={3}>
       <DataGrid rows={rows} columns={columns} />
-    </div>
+    </Paper>
   )
 }

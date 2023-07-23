@@ -1,9 +1,8 @@
-import { createTheme } from '@mui/material/styles'
+import { ThemeOptions, createTheme } from '@mui/material/styles'
 import { CSSProperties } from 'react'
 import { TypographyStyleOptions } from '@mui/material/styles/createTypography'
 import { colorData } from './colorToken'
-// import { Components } from '@mui/material/styles'
-// import { DataGrid } from '@mui/x-data-grid'
+import '@mui/lab/themeAugmentation'
 
 // ----- DataGrid -----
 declare module '@mui/material/styles' {
@@ -17,16 +16,23 @@ declare module '@mui/material/styles' {
           }
           '& .MuiDataGrid-columnHeaderTitleContainer': {
             borderBottom: 'none'
-            backgroundColor: string,
-            borderRight: string,
+            backgroundColor: string
+            borderRight: string
           }
           '& .MuiDataGrid-columnHeaderTitle': {
             fontWeight: number
             color: string
           }
+          // focus
           '& .MuiDataGrid-columnHeader': {
             backgroundColor: string
             color: string
+            '&:focus': {
+              outline: 'none'
+            }
+          }
+          '& .MuiDataGrid-columnHeader:focus-within': {
+            outline: 'none'
           }
           '& .MuiDataGrid-row': {
             backgroundColor: string
@@ -507,20 +513,28 @@ export const theme = createTheme(
             },
             '& .MuiDataGrid-columnHeaderTitleContainer': {
               borderBottom: 'none',
-              // backgroundColor: colorData.background.default,
-              backgroundColor: colorData.grey[800],
+              backgroundColor: colorData.background.default,
+              // backgroundColor: colorData.grey[800],
               // borderRight: `1px solid ${colorData.grey[500]}`,
               borderRight: colorData.background.default,
             },
             '& .MuiDataGrid-columnHeaderTitle': {
               fontWeight: fontWeight.bold,
-              color: colorData.common.white,
-            },
-            '& .MuiDataGrid-columnHeader': {
-              // backgroundColor: colorData.background.default,
-              backgroundColor: colorData.grey[800],
+              // color: colorData.common.white,
               color: colorData.text.primary,
             },
+            '& .MuiDataGrid-columnHeader': {
+              // backgroundColor: colorData.grey[800],
+              backgroundColor: colorData.background.default,
+              color: colorData.text.primary,
+              '&:focus': {
+                outline: 'none',
+              },
+            },
+            '& .MuiDataGrid-columnHeader:focus-within': {
+              outline: 'none',
+            },
+
             '& .MuiDataGrid-row': {
               backgroundColor: colorData.background.default,
               color: colorData.text.primary,
