@@ -1,7 +1,57 @@
-import { createTheme } from '@mui/material/styles'
+import { ThemeOptions, createTheme } from '@mui/material/styles'
 import { CSSProperties } from 'react'
 import { TypographyStyleOptions } from '@mui/material/styles/createTypography'
 import { colorData } from './colorToken'
+import '@mui/lab/themeAugmentation'
+
+// ----- DataGrid -----
+declare module '@mui/material/styles' {
+  interface Components {
+    MuiDataGrid?: {
+      styleOverrides?: {
+        root?: {
+          border: 'none'
+          '& .MuiDataGrid-cell': {
+            borderBottom: 'none'
+          }
+          '& .MuiDataGrid-columnHeaderTitleContainer': {
+            borderBottom: 'none'
+            backgroundColor: string
+            borderRight: string
+          }
+          '& .MuiDataGrid-columnHeaderTitle': {
+            fontWeight: number
+            color: string
+          }
+          // focus
+          '& .MuiDataGrid-columnHeader': {
+            backgroundColor: string
+            color: string
+            '&:focus': {
+              outline: 'none'
+            }
+          }
+          '& .MuiDataGrid-columnHeader:focus-within': {
+            outline: 'none'
+          }
+          '& .MuiDataGrid-row': {
+            backgroundColor: string
+            color: string
+          }
+          '& .MuiDataGrid-cell:focus-within': {
+            outline: 'none'
+          }
+          '& .MuiDataGrid-cell:focus-within .MuiDataGrid-cell:focus-within': {
+            outline: 'none'
+          }
+          '& .MuiDataGrid-cell:focus-within .MuiDataGrid-cell:focus-within .MuiDataGrid-cell:focus-within': {
+            outline: 'none'
+          }
+        }
+      }
+    }
+  }
+}
 
 export const breakpoints = {
   values: {
@@ -418,6 +468,101 @@ export const theme = createTheme(
           },
         },
       },
+      // ----- Table -----
+      MuiTable: {
+        styleOverrides: {
+          root: {
+            borderCollapse: 'separate',
+            borderSpacing: '0 8px',
+          },
+        },
+      },
+      MuiTableCell: {
+        styleOverrides: {
+          root: {
+            borderBottom: 'none',
+            padding: '8px',
+          },
+          head: {
+            backgroundColor: colorData.background.default,
+            color: colorData.text.primary,
+            fontWeight: fontWeight.bold,
+          },
+          body: {
+            backgroundColor: colorData.background.default,
+            color: colorData.text.primary,
+          },
+        },
+      },
+      MuiTableRow: {
+        styleOverrides: {
+          root: {
+            '&:nth-of-type(odd)': {
+              backgroundColor: colorData.background.default,
+            },
+          },
+        },
+      },
+      // ----- DataGrid -----
+      MuiDataGrid: {
+        styleOverrides: {
+          root: {
+            border: 'none',
+            '& .MuiDataGrid-cell': {
+              borderBottom: 'none',
+            },
+            '& .MuiDataGrid-columnHeaderTitleContainer': {
+              borderBottom: 'none',
+              backgroundColor: colorData.background.default,
+              // backgroundColor: colorData.grey[800],
+              // borderRight: `1px solid ${colorData.grey[500]}`,
+              borderRight: colorData.background.default,
+            },
+            '& .MuiDataGrid-columnHeaderTitle': {
+              fontWeight: fontWeight.bold,
+              // color: colorData.common.white,
+              color: colorData.text.primary,
+            },
+            '& .MuiDataGrid-columnHeader': {
+              // backgroundColor: colorData.grey[800],
+              backgroundColor: colorData.background.default,
+              color: colorData.text.primary,
+              '&:focus': {
+                outline: 'none',
+              },
+            },
+            '& .MuiDataGrid-columnHeader:focus-within': {
+              outline: 'none',
+            },
+
+            '& .MuiDataGrid-row': {
+              backgroundColor: colorData.background.default,
+              color: colorData.text.primary,
+            },
+            '& .MuiDataGrid-cell:focus-within': {
+              outline: 'none',
+            },
+            '& .MuiDataGrid-cell:focus-within .MuiDataGrid-cell:focus-within': {
+              outline: 'none',
+            },
+            '& .MuiDataGrid-cell:focus-within .MuiDataGrid-cell:focus-within .MuiDataGrid-cell:focus-within':
+              {
+                outline: 'none',
+              },
+          },
+        },
+      },
+      // ----- TextField -----
+      // MuiTextField: {
+      //   styleOverrides: {
+      //     root: {
+      //       '& .MuiInputBase-root': {
+      //         backgroundColor: colorData.background.default,
+      //         color: colorData.text.primary,
+      //       } as CSSProperties,
+      //       '& .MuiOutlinedInput-notchedOutline': {
+      //         borderColor: colorData.border.primary,
+      //       }
     },
     // 全体のオーバーライド
     styleOverrides: {

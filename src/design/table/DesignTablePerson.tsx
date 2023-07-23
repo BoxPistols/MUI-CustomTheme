@@ -87,19 +87,14 @@ export const TablePerson = () => {
 
   return (
     <>
-      {/* <TitleSet
-        headingText={'Basic Table Example'}
-        variant="h2"
-        subtitleText={
-          '基本的なテーブルUI。やや項目が多く、幅の微調整を加えた凡例'
-        }
+      {/*
+        '基本的なテーブルUI。やや項目が多く、幅の微調整を加えた凡例'
         // テーブル全体の高さToggle
-        AdditionalProps={
-          <TableHeightSwitch
-            label="高さ変更"
-            checked={maxheight}
-            onChange={handleChangeMaxheight}
-          />
+        <TableHeightSwitch
+        label="高さ変更"
+        checked={maxheight}
+        onChange={handleChangeMaxheight}
+        />
         }
       /> */}
       {/* テーブルレイアウト */}
@@ -156,7 +151,7 @@ export const TablePerson = () => {
           </TableBody>
         </CustomTable>
       </CustomTableContainer>
-      <Box mb={4} pr={2}>
+      <Box pr={2}>
         <TablePagination
           rowsPerPageOptions={[10, 30, 50, 100]}
           component="div"

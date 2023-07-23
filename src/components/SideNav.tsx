@@ -17,7 +17,7 @@ type SideNavProps = {
 
 export const SideNav = ({ open }: SideNavProps) => {
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex', justifyContent: 'center' }}>
       <Drawer variant="permanent" open={open}>
         <List>
           {['Inbox', 'Starred', 'Send email', 'Drafts', 'Setting'].map(
@@ -47,11 +47,11 @@ export const SideNav = ({ open }: SideNavProps) => {
         </List>
       </Drawer>
 
+      <DrawerHeader />
       <Box
         component="main"
-        sx={{ flexGrow: 1, p: 3, maxWidth: '100%', overflow: 'auto' }}
+        sx={{ mt: 5, p: 3, maxWidth: '100%', overflow: 'auto' }}
       >
-        <DrawerHeader />
         <Contents />
       </Box>
     </Box>
