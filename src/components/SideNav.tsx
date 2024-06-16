@@ -18,7 +18,7 @@ type SideNavProps = {
 export const SideNav = ({ open }: SideNavProps) => {
   return (
     <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-      <Drawer variant="permanent" open={open}>
+      <Drawer variant='permanent' open={open}>
         <List>
           {['Inbox', 'Starred', 'Send email', 'Drafts', 'Setting'].map(
             (text, index) => (
@@ -29,8 +29,7 @@ export const SideNav = ({ open }: SideNavProps) => {
                       minWidth: 0,
                       mr: 0,
                       ml: 0.5,
-                    }}
-                  >
+                    }}>
                     {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
                   </ListItemIcon>
                   <ListItemText
@@ -42,16 +41,15 @@ export const SideNav = ({ open }: SideNavProps) => {
                   />
                 </ListItemButton>
               </ListItem>
-            ),
+            )
           )}
         </List>
       </Drawer>
 
       <DrawerHeader />
       <Box
-        component="main"
-        sx={{ mt: 5, p: 3, maxWidth: '100%', overflow: 'auto' }}
-      >
+        component='main'
+        sx={{ mt: 5, p: 3, maxWidth: '100%', overflow: 'auto' }}>
         <Contents />
       </Box>
     </Box>

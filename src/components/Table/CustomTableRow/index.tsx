@@ -1,5 +1,5 @@
 import { styled, TableRow } from '@mui/material'
-import { ReactNode, TableHTMLAttributes } from 'react'
+import type { ReactNode, TableHTMLAttributes } from 'react'
 
 type ElementProps = Omit<TableHTMLAttributes<HTMLTableElement>, keyof Props>
 

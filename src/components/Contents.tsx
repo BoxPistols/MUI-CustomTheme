@@ -9,15 +9,15 @@ const Contents = () => {
   return (
     <>
       {/* <MockText /> */}
-      <Typography variant="display1" mb={3}>
+      <Typography variant='display1' mb={3}>
         Design Mock
       </Typography>
       {/* <Typography variant="h1">Design Mock</Typography> */}
       {/* <Display1>CustomTypography Display1</Display1> */}
-      <Typography variant="h2">Basic Table</Typography>
+      <Typography variant='h2'>Basic Table</Typography>
       <DesignTable />
       {/* <TablePerson /> */}
-      <Typography variant="h2">Data Grid</Typography>
+      <Typography variant='h2'>Data Grid</Typography>
       <DataGridBasic />
     </>
   )

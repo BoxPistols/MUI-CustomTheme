@@ -1,6 +1,6 @@
 import { FormControlLabel, Switch } from '@mui/material'
-import { SxProps } from '@mui/system'
-import { ChangeEvent } from 'react'
+import type { SxProps } from '@mui/system'
+import type { ChangeEvent } from 'react'
 
 type Props = {
   checked: boolean
@@ -20,7 +20,7 @@ const TableHeightSwitch = ({
     <FormControlLabel
       control={<Switch checked={checked} onChange={onChange} />}
       label={label}
-      labelPlacement="end"
+      labelPlacement='end'
       sx={sxStyle}
       style={{
         display: 'flex',

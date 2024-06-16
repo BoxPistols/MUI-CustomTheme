@@ -6,7 +6,7 @@ import {
   CustomTableRow,
 } from '../../components/Table'
 import { Box, TableBody, TablePagination } from '@mui/material'
-import { ChangeEvent, useState } from 'react'
+import { type ChangeEvent, useState } from 'react'
 
 // データモックアップ
 import Data from '../../lib/mock-data/jp-person.json'
@@ -76,10 +76,10 @@ export const TablePerson = () => {
     setPage(0)
   }
   // テーブル全体の高さToggle
-  const [maxheight, setMaxheight] = useState(false)
-  const handleChangeMaxheight = (event: ChangeEvent<HTMLInputElement>) => {
-    setMaxheight(event.target.checked)
-  }
+  const [maxheight, _] = useState(false)
+  // const handleChangeMaxheight = (event: ChangeEvent<HTMLInputElement>) => {
+  //   setMaxheight(event.target.checked)
+  // }
 
   // CustomCellの初期値とは別に、このページ内で最小幅/最大幅の共通初期値を指定し直したい時は新たに設置し、style内で反映させます
   const minWidthValue = 120
@@ -99,7 +99,7 @@ export const TablePerson = () => {
       /> */}
       {/* テーブルレイアウト */}
       <CustomTableContainer maxHeightValue={maxheight ? '100%' : 480}>
-        <CustomTable aria-label="table-aria-name">
+        <CustomTable aria-label='table-aria-name'>
           {/* Table Heading */}
 
           <CustomTableHeader>
@@ -112,8 +112,7 @@ export const TablePerson = () => {
                   minWidth: column.minWidth ? column.minWidth : minWidthValue,
                   maxWidth: column.maxWidth ? column.maxWidth : maxWidthValue,
                   // 何も幅の指定をしなければ、フォールバックとしてCustomTableCellで指定済のmin/max値が当てられます
-                }}
-              >
+                }}>
                 {column.label}
               </CustomTableCell>
             ))}
@@ -139,8 +138,7 @@ export const TablePerson = () => {
                             ? column.maxWidth
                             : maxWidthValue,
                           // 何も幅の指定をしなければ、フォールバックとしてCustomTableCellで指定済のmin/max値が当てられます
-                        }}
-                      >
+                        }}>
                         {/* {value} */}
                         {data[column.key as keyof typeof data]}
                       </CustomTableCell>
@@ -154,7 +152,7 @@ export const TablePerson = () => {
       <Box pr={2}>
         <TablePagination
           rowsPerPageOptions={[10, 30, 50, 100]}
-          component="div"
+          component='div'
           count={mockDatas.length}
           rowsPerPage={rowsPerPage}
           labelRowsPerPage={'表示行数'}

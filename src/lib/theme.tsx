@@ -1,6 +1,6 @@
 import { ThemeOptions, createTheme } from '@mui/material/styles'
-import { CSSProperties } from 'react'
-import { TypographyStyleOptions } from '@mui/material/styles/createTypography'
+import type { CSSProperties } from 'react'
+import type { TypographyStyleOptions } from '@mui/material/styles/createTypography'
 import { colorData } from './colorToken'
 import '@mui/lab/themeAugmentation'
 
@@ -144,7 +144,7 @@ const baseFontSize = 14
 // convert px to rem
 const pxToRem = (px: number) => {
   const remValue = (px / baseFontSize).toFixed(2)
-  return `${parseFloat(remValue)}rem`
+  return `${Number.parseFloat(remValue)}rem`
 }
 
 // md = 1rem = という抽象化された値を使うことで、拡大表示などアクセシビリティの向上と実装の簡素化を図る
@@ -613,7 +613,7 @@ export const theme = createTheme(
         },
       },
     },
-  },
+  }
 
   // ======== global settings 全体調整で必要な時に設置 ========
 

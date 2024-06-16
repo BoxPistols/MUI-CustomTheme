@@ -1,5 +1,5 @@
 import { styled, TableHead, TableRow } from '@mui/material'
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 
 type Props = {
   children: ReactNode

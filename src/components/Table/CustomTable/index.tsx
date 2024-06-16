@@ -1,6 +1,6 @@
 import { Table } from '@mui/material'
-import { SxProps } from '@mui/system'
-import { ReactNode, TableHTMLAttributes } from 'react'
+import type { SxProps } from '@mui/system'
+import type { ReactNode, TableHTMLAttributes } from 'react'
 /* Omitが無いとchildren内のTableCell要素の警告が出る */
 
 type ElementProps = Omit<TableHTMLAttributes<HTMLTableElement>, keyof Props>

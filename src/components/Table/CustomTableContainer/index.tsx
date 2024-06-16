@@ -1,6 +1,6 @@
 import { Paper, TableContainer } from '@mui/material'
-import { SxProps } from '@mui/system'
-import { ReactNode, TableHTMLAttributes } from 'react'
+import type { SxProps } from '@mui/system'
+import type { ReactNode, TableHTMLAttributes } from 'react'
 
 type ElementProps = Omit<TableHTMLAttributes<HTMLTableElement>, keyof Props>
 type Props = {
@@ -20,8 +20,7 @@ const CustomTableContainer = ({
       component={Paper}
       style={{ maxHeight: maxHeightValue }}
       sx={sx}
-      {...props}
-    >
+      {...props}>
       {children}
     </TableContainer>
   )

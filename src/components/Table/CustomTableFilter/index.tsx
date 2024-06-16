@@ -1,6 +1,6 @@
 import SearchTwoToneIcon from '@mui/icons-material/SearchTwoTone'
 import { Box, InputAdornment, TextField } from '@mui/material'
-import { ChangeEventHandler } from 'react'
+import type { ChangeEventHandler } from 'react'
 
 type Props = {
   onChange: ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>
@@ -18,7 +18,7 @@ export const CustomTableFilter = ({ onChange, placeholder, value }: Props) => {
         }}
         InputProps={{
           startAdornment: (
-            <InputAdornment position="start">
+            <InputAdornment position='start'>
               <SearchTwoToneIcon />
             </InputAdornment>
           ),
@@ -26,10 +26,10 @@ export const CustomTableFilter = ({ onChange, placeholder, value }: Props) => {
         onChange={onChange}
         placeholder={placeholder}
         value={value}
-        size="small"
+        size='small'
         fullWidth
-        margin="normal"
-        variant="outlined"
+        margin='normal'
+        variant='outlined'
       />
     </Box>
   )

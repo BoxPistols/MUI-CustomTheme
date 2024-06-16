@@ -17,8 +17,7 @@ export const CustomTableFilterResult = ({ text }: Props) => {
               whiteSpace: 'nowrap',
               textAlign: 'center',
               fontSize: 24,
-            }}
-          >
+            }}>
             <b>{text}</b>
           </Box>
         </CustomTableCell>

@@ -1,5 +1,5 @@
 import { Paper } from '@mui/material'
-import { DataGrid, GridRowsProp, GridColDef } from '@mui/x-data-grid'
+import { DataGrid, type GridRowsProp, type GridColDef } from '@mui/x-data-grid'
 
 const rows: GridRowsProp = [
   {

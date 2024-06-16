@@ -11,5 +11,6 @@ export interface User {
   coverImg: string
   followers: string
   description: string
+  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
   [key: string]: any
 }

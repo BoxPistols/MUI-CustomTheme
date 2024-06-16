@@ -2,9 +2,9 @@ import {
   styled,
   TableCell,
   tableCellClasses,
-  TableCellProps,
+  type TableCellProps,
 } from '@mui/material'
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 
 type ElementProps = TableCellProps
 
@@ -47,8 +47,7 @@ const CustomTableCell = ({
         wordBreak: noWrap ? 'keep-all' : 'break-word',
         minWidth: minWidthValue ? minWidthValue : 60,
         maxWidth: maxWidthValue ? maxWidthValue : 240,
-      }}
-    >
+      }}>
       {children}
     </StyledTableCell>
   )
@@ -56,14 +55,14 @@ const CustomTableCell = ({
 // 編集機能がある時のTableCell
 const StyledTableCellAction = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
-    position: `sticky`,
+    position: 'sticky',
     top: 0,
     right: 0,
     backgroundColor: theme.palette.common.black,
     color: theme.palette.common.white,
   },
   [`&.${tableCellClasses.body}`]: {
-    position: `sticky`,
+    position: 'sticky',
     top: 0,
     right: 0,
     borderColor: theme.palette.grey[500],
@@ -76,7 +75,7 @@ export const CustomTableCellAction = ({
   ...props
 }: Props & ElementProps) => {
   return (
-    <StyledTableCellAction align="center" sx={{ top: 0 }} {...props}>
+    <StyledTableCellAction align='center' sx={{ top: 0 }} {...props}>
       {children}
     </StyledTableCellAction>
   )

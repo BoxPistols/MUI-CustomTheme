@@ -8,6 +8,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "format": "yarn biome format --write .",
+    "lint": "yarn biome lint --write ./src",
+    "fix": "yarn run lint && yarn run format",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
@@ -28,15 +31,12 @@
   },
   "description": "Theme customization for MUI",
   "devDependencies": {
+    "@biomejs/biome": "^1.8.0",
     "@types/react-dom": "^18.2.6",
     "react-scripts": "latest"
   },
   "browserslist": {
-    "production": [
-      ">8%",
-      "not dead",
-      "not op_mini all"
-    ],
+    "production": [">8%", "not dead", "not op_mini all"],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",

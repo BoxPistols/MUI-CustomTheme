@@ -16,22 +16,21 @@ export default function Header() {
 
   return (
     <>
-      <AppBar position="fixed">
+      <AppBar position='fixed'>
         <Toolbar>
           <IconButton
-            color="inherit"
-            aria-label="toggle drawer"
+            color='inherit'
+            aria-label='toggle drawer'
             // onClick={open ? handleDrawerClose : handleDrawerOpen}
             onClick={handleDrawerOpen}
-            edge="start"
+            edge='start'
             sx={{
               mr: 2.5,
               ml: -1.75,
-            }}
-          >
+            }}>
             {open ? <ChevronLeftIcon /> : <ChevronRightIcon />}
           </IconButton>
-          <Typography variant="xl" color={'primary.contrastText'} noWrap>
+          <Typography variant='xl' color={'primary.contrastText'} noWrap>
             Mini variant drawer
           </Typography>
         </Toolbar>
